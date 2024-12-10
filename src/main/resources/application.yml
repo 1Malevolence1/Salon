@@ -1,0 +1,8 @@
+spring:
+    application:
+        name: salon
+
+
+
+server:
+    port: 8090
