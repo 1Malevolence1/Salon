@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Услуги</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="logo">Barbershop</h1>
+        <nav>
+            <a href="clients.html">Клиенты</a>
+            <a href="service.html">Услуги</a>
+            <a href="masters.html">Мастера</a>
+            <a href="priceList.html">Прайс-лист</a>
+            <a href="reports.html">Отчёты</a>
+        </nav>
+        <a href="index.html" class="button">Посещения</a>
+    </header>
+
+    <div class="title"><h1>Услуги</h1></div>
+    <div class="container">
+        <div class="table__contaier">
+            <table id="table_main" class="table__index">
+                <thead>
+                    <tr>
+                        <th>Номер</th>
+                        <th>Название услуги</th>
+                        <th>Описание</th>
+                        <th>Цена</th>
+                        <th>Действие</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Стрижка</td>
+                        <td>Классическая стрижка</td>
+                        <td>1000</td>
+                        <td>
+                            <button class="btn edit__btn">Редактировать</button>
+                            <button class="btn delete__btn">Удалить</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Бритьё</td>
+                        <td>Классическое бритьё опасной бритвой</td>
+                        <td>800</td>
+                        <td>
+                            <button class="btn edit__btn">Редактировать</button>
+                            <button class="btn delete__btn">Удалить</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Моделирование бороды</td>
+                        <td>Форма и уход за бородой</td>
+                        <td>1200</td>
+                        <td>
+                            <button class="btn edit__btn">Редактировать</button>
+                            <button class="btn delete__btn">Удалить</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Детская стрижка</td>
+                        <td>Стрижка для детей до 12 лет</td>
+                        <td>700</td>
+                        <td>
+                            <button class="btn edit__btn">Редактировать</button>
+                            <button class="btn delete__btn">Удалить</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Окрашивание</td>
+                        <td>Окрашивание волос</td>
+                        <td>3000</td>
+                        <td>
+                            <button class="btn edit__btn">Редактировать</button>
+                            <button class="btn delete__btn">Удалить</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Мытьё головы</td>
+                        <td>Уход за волосами</td>
+                        <td>500</td>
+                        <td>
+                            <button class="btn edit__btn">Редактировать</button>
+                            <button class="btn delete__btn">Удалить</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Массаж головы</td>
+                        <td>Расслабляющий массаж головы</td>
+                        <td>600</td>
+                        <td>
+                            <button class="btn edit__btn">Редактировать</button>
+                            <button class="btn delete__btn">Удалить</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="edit__form">
+            <h2 id="form_title">Создание записи</h2>
+            <form id="main_form">
+                <label class="label form__label">Номер:</label>
+                <input id="serviceId" class="form__text" type="text" maxlength="10" readonly required><br />
+
+                <label class="label form__label">Название услуги:</label>
+                <input id="serviceName" class="form__text" type="text" maxlength="255" required><br />
+
+                <label class="label form__label">Описание:</label>
+                <textarea id="description" class="form__text" type="" maxlength="255" required></textarea><br />
+
+                <label class="label form__label">Цена:</label>
+                <input id="price" class="form__text" type="text" maxlength="10" required><br />
+
+                <button id="form_button" class="btn confrim__btn">Создать</button>
+            </form>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        document.getElementById("price").addEventListener("input", function (event) {
+            if (!/\d/.test(event.data)) {
+                event.target.value = event.target.value.substring(0, event.target.value.length - 1);
+            }
+        }); // только цифры в input
+
+
+
+
+
+        // функция для заполнения формы данными из строки таблицы
+        function fillEditForm(row) {
+            var cells = row.cells;
+            var serviceId = cells[0].innerText.trim();
+            var serviceName = cells[1].innerText.trim();
+            var description = cells[2].innerText.trim();
+            var price = cells[3].innerText.trim();
+
+            document.getElementById("serviceId").value = serviceId;
+            document.getElementById("serviceName").value = serviceName;
+            document.getElementById("description").value = description;
+            document.getElementById("price").value = price;
+
+            document.getElementById("form_title").innerText = "Редактирование записи";
+            document.getElementById("form_button").innerText = "Обновить";
+        }
+
+        // обработчик
+        document.addEventListener('DOMContentLoaded', () => {
+            const tableBody = document.querySelector('#table_main tbody');
+            tableBody.addEventListener('click', handleClickInTable);
+
+            document.getElementById('main_form').addEventListener('submit', submitForm);
+        });
+
+        // обработка нажатий на кнопки в таблице
+        function handleClickInTable(event) {
+            const target = event.target.closest('button');
+
+            if (!target) return;
+
+            if (target.textContent === 'Редактировать') {
+                editRow(target);
+            } else if (target.textContent === 'Удалить') {
+                deleteRow(target);
+            }
+        }
+        function editRow(button) {
+            const row = button.closest('tr');
+            fillEditForm(row);
+        }
+        function deleteRow(button) {
+            const row = button.closest('tr');
+            row.remove();
+            document.getElementById('main_form').reset();
+            document.getElementById("form_title").innerText = "Создание записи";
+            document.getElementById("form_button").innerText = "Создать";
+            numInForm();
+        }
+
+
+        // сохранение/добавление данных из формы в таблицу
+        function submitForm(event) {
+            event.preventDefault();
+
+            // редактирование существующей строки в таблице
+            if (document.getElementById('form_button').innerText == "Обновить") {
+                const form = event.target;
+                const serviceId = parseInt(form.serviceId.value);
+                const serviceName = form.serviceName.value;
+                const description = form.description.value;
+                const price = form.price.value;
+
+                // найдем строку, которую редактируем
+                const rows = document.querySelectorAll('#table_main tbody tr');
+                let foundRow;
+                rows.forEach(row => {
+                    const cell = row.querySelector('td:nth-child(1)');
+                    if (parseInt(cell.innerText) === serviceId) {
+                        foundRow = row;
+                    }
+                });
+
+                if (foundRow) {
+                    // Обновляем значения в таблице
+                    foundRow.querySelectorAll('td')[1].innerText = serviceName;
+                    foundRow.querySelectorAll('td')[2].innerText = description;
+                    foundRow.querySelectorAll('td')[3].innerText = price;
+                }
+                document.getElementById('main_form').reset();
+                numInForm();
+                document.getElementById("form_title").innerText = "Создание записи";
+                document.getElementById("form_button").innerText = "Создать";
+            } else { // добавление новой строки в таблицу
+                event.preventDefault();
+
+                // получаем данные из формы
+                const serviceId = document.getElementById('serviceId').value;
+                const serviceName = document.getElementById('serviceName').value;
+                const description = document.getElementById('description').value;
+                const price = document.getElementById('price').value;
+
+                // создаем новую строку в таблице
+                const tableBody = document.getElementById('table_main').getElementsByTagName('tbody')[0];
+                const newRow = tableBody.insertRow(-1);
+
+                // добавляем ячейки с данными
+                const newCell0 = newRow.insertCell(0);
+                newCell0.textContent = serviceId;
+                const newCell1 = newRow.insertCell(1);
+                newCell1.textContent = serviceName;
+                const newCell2 = newRow.insertCell(2);
+                newCell2.textContent = description;
+                const newCell3 = newRow.insertCell(3);
+                newCell3.textContent = price;
+                const newCellActions = newRow.insertCell(4);
+
+                // кнопки
+                const editButton = document.createElement('button');
+                editButton.textContent = 'Редактировать';
+                editButton.className = 'btn edit__btn'
+                const deleteButton = document.createElement('button');
+                deleteButton.textContent = 'Удалить';
+                deleteButton.className = 'btn delete__btn';
+                const space = document.createElement('span');
+                space.textContent = ' ';
+
+                // добавляем кнопки в последнюю ячейку
+                newCellActions.appendChild(editButton);
+                newCellActions.appendChild(space);
+                newCellActions.appendChild(deleteButton);
+
+                document.getElementById('main_form').reset();
+                numInForm();
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // подстановка ((последнего id в таблице) + 1) в форму для создания
+        window.onload = numInForm();
+        function numInForm() {
+            if (isTableEmpty("table_main")) {
+                document.getElementById("serviceId").value = 1;
+                return;
+            }
+
+            var table = document.getElementById("table_main");
+            var rows = table.rows;
+            var lastRow = rows[rows.length - 1];
+
+            var lastIdCell = lastRow.cells[0];
+            var lastId = parseInt(lastIdCell.innerText.trim());
+
+            var nextId = lastId + 1;
+
+
+            document.getElementById("serviceId").value = nextId;
+        };
+
+
+        // функция для проверки, пуста ли таблица
+        function isTableEmpty(tableId) {
+            const table = document.getElementById(tableId);
+            const tbody = table.querySelector('tbody');
+
+            return !tbody || tbody.rows.length === 0;
+        }
+    </script>
+
+</html>

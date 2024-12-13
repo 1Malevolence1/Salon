@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Клиенты</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="logo">Barbershop</h1>
+        <nav>
+            <a href="clients.html">Клиенты</a>
+            <a href="service.html">Услуги</a>
+            <a href="masters.html">Мастера</a>
+            <a href="priceList.html">Прайс-лист</a>
+            <a href="reports.html">Отчёты</a>
+        </nav>
+        <a href="index.html" class="button">Посещения</a>
+    </header>
+
+    <div class="title"><h1>Клиенты</h1></div>
+    <div class="container">
+        <div class="table__contaier">
+            <table id="table_main" class="table__index">
+                <thead>
+                    <tr>
+                        <th>Номер</th>
+                        <th>Имя</th>
+                        <th>Фамилия</th>
+                        <th>Отчество</th>
+                        <th>Телефон</th>
+                        <th>Email</th>
+                        <th>Дата регистрации</th>
+                        <th>Действие</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Иван</td>
+                        <td>Иванов</td>
+                        <td>Иванович</td>
+                        <td>79991234567</td>
+                        <td>ivanov@mail.com</td>
+                        <td>01.12.2024</td>
+                        <td>
+                            <button class="btn edit__btn">Редактировать</button>
+                            <button class="btn delete__btn">Удалить</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Петр</td>
+                        <td>Петров</td>
+                        <td>Петрович</td>
+                        <td>79991234568</td>
+                        <td>petrov@mail.com</td>
+                        <td>11.11.2024</td>
+                        <td>
+                            <button class="btn edit__btn">Редактировать</button>
+                            <button class="btn delete__btn">Удалить</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Сергей</td>
+                        <td>Кузнецов</td>
+                        <td>Владимирович</td>
+                        <td>79991234569</td>
+                        <td>sergeev@mail.com</td>
+                        <td>15.11.2024</td>
+                        <td>
+                            <button class="btn edit__btn">Редактировать</button>
+                            <button class="btn delete__btn">Удалить</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Алексей</td>
+                        <td>Орлов</td>
+                        <td>Павлович</td>
+                        <td>79991234570</td>
+                        <td>alekseev@mail.com</td>
+                        <td>25.11.2024</td>
+                        <td>
+                            <button class="btn edit__btn">Редактировать</button>
+                            <button class="btn delete__btn">Удалить</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Дмитрий</td>
+                        <td>Дмитриев</td>
+                        <td>Дмитриевич</td>
+                        <td>79991234571</td>
+                        <td>dmitriev@mail.com</td>
+                        <td>26.11.2024</td>
+                        <td>
+                            <button class="btn edit__btn">Редактировать</button>
+                            <button class="btn delete__btn">Удалить</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Михаил</td>
+                        <td>Михайлов</td>
+                        <td>Михайлович</td>
+                        <td>79991234572</td>
+                        <td>mikhailov@mail.com</td>
+                        <td>29.11.2024</td>
+                        <td>
+                            <button class="btn edit__btn">Редактировать</button>
+                            <button class="btn delete__btn">Удалить</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Олег</td>
+                        <td>Олегов</td>
+                        <td>Олегович</td>
+                        <td>79991234573</td>
+                        <td>olegov@mail.com</td>
+                        <td>03.12.2024</td>
+                        <td>
+                            <button class="btn edit__btn">Редактировать</button>
+                            <button class="btn delete__btn">Удалить</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="edit__form">
+            <h2 id="form_title">Создание записи</h2>
+            <form id="main_form">
+                <label class="label form__label">Номер:</label>
+                <input id="clientId" class="form__text" type="text" maxlength="10" readonly required><br />
+
+                <label class="label form__label">Имя:</label>
+                <input id="givenName" class="form__text" type="text" maxlength="255" required><br />
+
+                <label class="label form__label">Фамилия:</label>
+                <input id="surname" class="form__text" type="text" maxlength="255" required><br />
+
+                <label class="label form__label">Отчество:</label>
+                <input id="patronymic" class="form__text" type="text" maxlength="255" required><br />
+
+                <label class="label form__label">Телефон:</label>
+                <input id="phone" class="form__text" type="text" maxlength="20" required><br />
+
+                <label class="label form__label">Email:</label>
+                <input id="email" class="form__text" type="email" maxlength="100" required><br />
+
+                <label class="label form__label">Дата регистрации:</label>
+                <input id="registrationDate" class="form__text" type="date" required><br />
+
+                <button id="form_button" class="btn confrim__btn">Создать</button>
+            </form>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        document.getElementById("phone").addEventListener("input", function (event) {
+            if (!/\d/.test(event.data)) {
+                event.target.value = event.target.value.substring(0, event.target.value.length - 1);
+            }
+        }); // только цифры в input
+
+
+
+
+
+        // функция для заполнения формы данными из строки таблицы
+        function fillEditForm(row) {
+            var cells = row.cells;
+            var clientId = cells[0].innerText.trim();
+            var givenName = cells[1].innerText.trim();
+            var surname = cells[2].innerText.trim();
+            var patronymic = cells[3].innerText.trim();
+            var phone = cells[4].innerText.trim();
+            var email = cells[5].innerText.trim();
+            var partsDate = cells[6].innerText.split(".");
+            var registrationDate = `${partsDate[2]}-${partsDate[1]}-${partsDate[0]}`;
+
+            document.getElementById("clientId").value = clientId;
+            document.getElementById("givenName").value = givenName;
+            document.getElementById("surname").value = surname;
+            document.getElementById("patronymic").value = patronymic;
+            document.getElementById("phone").value = phone;
+            document.getElementById("email").value = email;
+            document.getElementById("registrationDate").value = registrationDate;
+
+            document.getElementById("form_title").innerText = "Редактирование записи";
+            document.getElementById("form_button").innerText = "Обновить";
+        }
+
+        // обработчик
+        document.addEventListener('DOMContentLoaded', () => {
+            const tableBody = document.querySelector('#table_main tbody');
+            tableBody.addEventListener('click', handleClickInTable);
+
+            document.getElementById('main_form').addEventListener('submit', submitForm);
+        });
+
+        // обработка нажатий на кнопки в таблице
+        function handleClickInTable(event) {
+            const target = event.target.closest('button');
+
+            if (!target) return;
+
+            if (target.textContent === 'Редактировать') {
+                editRow(target);
+            } else if (target.textContent === 'Удалить') {
+                deleteRow(target);
+            }
+        }
+        function editRow(button) {
+            const row = button.closest('tr');
+            fillEditForm(row);
+        }
+        function deleteRow(button) {
+            const row = button.closest('tr');
+            row.remove();
+            document.getElementById('main_form').reset();
+            document.getElementById("form_title").innerText = "Создание записи";
+            document.getElementById("form_button").innerText = "Создать";
+            numInForm();
+        }
+
+
+        // сохранение/добавление данных из формы в таблицу
+        function submitForm(event) {
+            event.preventDefault();
+
+            // редактирование существующей строки в таблице
+            if (document.getElementById('form_button').innerText == "Обновить") {
+                const form = event.target;
+                const clientId = parseInt(form.clientId.value);
+                const givenName = form.givenName.value;
+                const surname = form.surname.value;
+                const patronymic = form.patronymic.value;
+                const phone = form.phone.value;
+                const email = form.email.value;
+                const registrationDate = form.registrationDate.value;
+
+                // найдем строку, которую редактируем
+                const rows = document.querySelectorAll('#table_main tbody tr');
+                let foundRow;
+                rows.forEach(row => {
+                    const cell = row.querySelector('td:nth-child(1)');
+                    if (parseInt(cell.innerText) === clientId) {
+                        foundRow = row;
+                    }
+                });
+
+                if (foundRow) {
+                    // Обновляем значения в таблице
+                    foundRow.querySelectorAll('td')[1].innerText = givenName;
+                    foundRow.querySelectorAll('td')[2].innerText = surname;
+                    foundRow.querySelectorAll('td')[3].innerText = patronymic;
+                    foundRow.querySelectorAll('td')[4].innerText = phone;
+                    foundRow.querySelectorAll('td')[5].innerText = email;
+                    var partsDate = registrationDate.split("-");
+                    foundRow.querySelectorAll('td')[6].innerText = (`${partsDate[2]}-${partsDate[1]}-${partsDate[0]}`).replace(/-/g, ".");
+                }
+                document.getElementById('main_form').reset();
+                numInForm();
+                document.getElementById("form_title").innerText = "Создание записи";
+                document.getElementById("form_button").innerText = "Создать";
+            } else { // добавление новой строки в таблицу
+                event.preventDefault();
+
+                // получаем данные из формы
+                const clientId = document.getElementById('clientId').value;
+                const givenName = document.getElementById('givenName').value;
+                const surname = document.getElementById('surname').value;
+                const patronymic = document.getElementById('patronymic').value;
+                const phone = document.getElementById('phone').value;
+                const email = document.getElementById('email').value;
+                var partsDate = document.getElementById('registrationDate').value.split("-");
+                const registrationDate = (`${partsDate[2]}-${partsDate[1]}-${partsDate[0]}`).replace(/-/g, ".");
+
+                // создаем новую строку в таблице
+                const tableBody = document.getElementById('table_main').getElementsByTagName('tbody')[0];
+                const newRow = tableBody.insertRow(-1);
+
+                // добавляем ячейки с данными
+                const newCell0 = newRow.insertCell(0);
+                newCell0.textContent = clientId;
+                const newCell1 = newRow.insertCell(1);
+                newCell1.textContent = givenName;
+                const newCell2 = newRow.insertCell(2);
+                newCell2.textContent = surname;
+                const newCell3 = newRow.insertCell(3);
+                newCell3.textContent = patronymic;
+                const newCell4 = newRow.insertCell(4);
+                newCell4.textContent = phone;
+                const newCell5 = newRow.insertCell(5);
+                newCell5.textContent = email;
+                const newCell6 = newRow.insertCell(6);
+                newCell6.textContent = registrationDate;
+                const newCellActions = newRow.insertCell(7);
+
+                // кнопки
+                const editButton = document.createElement('button');
+                editButton.textContent = 'Редактировать';
+                editButton.className = 'btn edit__btn'
+                const deleteButton = document.createElement('button');
+                deleteButton.textContent = 'Удалить';
+                deleteButton.className = 'btn delete__btn';
+                const space = document.createElement('span');
+                space.textContent = ' ';
+
+                // добавляем кнопки в последнюю ячейку
+                newCellActions.appendChild(editButton);
+                newCellActions.appendChild(space);
+                newCellActions.appendChild(deleteButton);
+
+                document.getElementById('main_form').reset();
+                numInForm();
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // подстановка ((последнего id в таблице) + 1) в форму для создания
+        window.onload = numInForm();
+        function numInForm() {
+            if (isTableEmpty("table_main")) {
+                document.getElementById("clientId").value = 1;
+                return;
+            }
+
+            var table = document.getElementById("table_main");
+            var rows = table.rows;
+            var lastRow = rows[rows.length - 1];
+
+            var lastIdCell = lastRow.cells[0];
+            var lastId = parseInt(lastIdCell.innerText.trim());
+
+            var nextId = lastId + 1;
+
+
+            document.getElementById("clientId").value = nextId;
+        };
+
+
+        // функция для проверки, пуста ли таблица
+        function isTableEmpty(tableId) {
+            const table = document.getElementById(tableId);
+            const tbody = table.querySelector('tbody');
+
+            return !tbody || tbody.rows.length === 0;
+        }
+    </script>
+
+</html>
