@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Посещения</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="logo">Barbershop</h1>
+        <nav>
+            <a href="clients.html">Клиенты</a>
+            <a href="service.html">Услуги</a>
+            <a href="masters.html">Мастера</a>
+            <a href="priceList.html">Прайс-лист</a>
+            <a href="reports.html">Отчёты</a>
+        </nav>
+        <a href="index.html" class="button">Посещения</a>
+    </header>
+
+    <div class="title">
+        <h1>Посещения</h1>
+    </div>
+    <div class="container">
+        <div class="table__contaier">
+            <table id="table_main" class="table__index">
+                <thead>
+                    <tr>
+                        <th>Номер</th>
+                        <th>Клиент</th>
+                        <th>Мастер</th>
+                        <th>Услуга</th>
+                        <th>Дата записи</th>
+                        <th>Статус</th>
+                        <th>Цена</th>
+                        <th>Действие</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Иван</td>
+                        <td>Андрей</td>
+                        <td>Стрижка</td>
+                        <td>30.11.2024</td>
+                        <td>Сделано</td>
+                        <td>1000</td>
+                        <td>
+                            <button class="btn edit__btn">Редактировать</button>
+                            <button class="btn delete__btn">Удалить</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Петр</td>
+                        <td>Дмитрий</td>
+                        <td>Бритьё</td>
+                        <td>25.12.2024</td>
+                        <td>Запланировано</td>
+                        <td>800</td>
+                        <td>
+                            <button class="btn edit__btn">Редактировать</button>
+                            <button class="btn delete__btn">Удалить</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Сергей</td>
+                        <td>Егор</td>
+                        <td>Моделирование бороды</td>
+                        <td>04.12.2024</td>
+                        <td>Отменено</td>
+                        <td>1200</td>
+                        <td>
+                            <button class="btn edit__btn">Редактировать</button>
+                            <button class="btn delete__btn">Удалить</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Алексей</td>
+                        <td>Николай</td>
+                        <td>Детская стрижка</td>
+                        <td>05.12.2024</td>
+                        <td>Сделано</td>
+                        <td>700</td>
+                        <td>
+                            <button class="btn edit__btn">Редактировать</button>
+                            <button class="btn delete__btn">Удалить</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Дмитрий</td>
+                        <td>Игорь</td>
+                        <td>Окрашивание</td>
+                        <td>20.12.2024</td>
+                        <td>Запланировано</td>
+                        <td>3000</td>
+                        <td>
+                            <button class="btn edit__btn">Редактировать</button>
+                            <button class="btn delete__btn">Удалить</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Михаил</td>
+                        <td>Артем</td>
+                        <td>Мытьё головы</td>
+                        <td>06.12.2024</td>
+                        <td>Сделано</td>
+                        <td>500</td>
+                        <td>
+                            <button class="btn edit__btn">Редактировать</button>
+                            <button class="btn delete__btn">Удалить</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Олег</td>
+                        <td>Андрей</td>
+                        <td>Массаж головы</td>
+                        <td>19.12.2024</td>
+                        <td>Запланировано</td>
+                        <td>600</td>
+                        <td>
+                            <button class="btn edit__btn">Редактировать</button>
+                            <button class="btn delete__btn">Удалить</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Иван</td>
+                        <td>Егор</td>
+                        <td>Мытьё головы</td>
+                        <td>06.12.2024</td>
+                        <td>Сделано</td>
+                        <td>500</td>
+                        <td>
+                            <button class="btn edit__btn">Редактировать</button>
+                            <button class="btn delete__btn">Удалить</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Петр</td>
+                        <td>Николай</td>
+                        <td>Окрашивание</td>
+                        <td>07.12.2024</td>
+                        <td>Сделано</td>
+                        <td>3000</td>
+                        <td>
+                            <button class="btn edit__btn">Редактировать</button>
+                            <button class="btn delete__btn">Удалить</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Сергей</td>
+                        <td>Андрей</td>
+                        <td>Детская стрижка</td>
+                        <td>20.12.2024</td>
+                        <td>Запланировано</td>
+                        <td>600</td>
+                        <td>
+                            <button class="btn edit__btn">Редактировать</button>
+                            <button class="btn delete__btn">Удалить</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>Алексей</td>
+                        <td>Игорь</td>
+                        <td>Массаж головы</td>
+                        <td>09.12.2024</td>
+                        <td>Сделано</td>
+                        <td>600</td>
+                        <td>
+                            <button class="btn edit__btn">Редактировать</button>
+                            <button class="btn delete__btn">Удалить</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>Дмитрий</td>
+                        <td>Дмитрий</td>
+                        <td>Бритьё</td>
+                        <td>09.12.2024</td>
+                        <td>Отменено</td>
+                        <td>600</td>
+                        <td>
+                            <button class="btn edit__btn">Редактировать</button>
+                            <button class="btn delete__btn">Удалить</button>
+                        </td>
+                    </tr>
+
+                    <!--Planned, Done, Canceled -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="edit__form">
+            <h2 id="form_title">Создание записи</h2>
+            <form id="main_form">
+                <label class="label form__label">Номер:</label>
+                <input id="appointmentId" class="form__text" type="text" maxlength="10" readonly required><br />
+
+                <label class="label form__label">Клиент:</label>
+                <select id="client" class="form__text" required>
+                    <option value="">Выберите вариант</option>
+                    <option value="Иван">Иван</option>
+                    <option value="Петр">Петр</option>
+                    <option value="Сергей">Сергей</option>
+                    <option value="Алексей">Алексей</option>
+                    <option value="Дмитрий">Дмитрий</option>
+                    <option value="Михаил">Михаил</option>
+                    <option value="Олег">Олег</option>
+                </select><br />
+
+                <label class="label form__label">Мастер:</label>
+                <select id="master" class="form__text" required>
+                    <option value="">Выберите вариант</option>
+                    <option value="Андрей">Андрей</option>
+                    <option value="Дмитрий">Дмитрий</option>
+                    <option value="Егор">Егор</option>
+                    <option value="Николай">Николай</option>
+                    <option value="Игорь">Игорь</option>
+                    <option value="Артем">Игорь</option>
+                </select><br />
+
+                <label class="label form__label">Услуга:</label>
+                <select id="service" class="form__text" required>
+                    <option value="">Выберите вариант</option>
+                    <option value="Стрижка">Стрижка</option>
+                    <option value="Бритьё">Бритьё</option>
+                    <option value="Моделирование бороды">Моделирование бороды</option>
+                    <option value="Детская стрижка">Детская стрижка</option>
+                    <option value="Окрашивание">Окрашивание</option>
+                    <option value="Мытьё головы">Мытьё головы</option>
+                    <option value="Массаж головы">Массаж головы</option>
+                </select><br />
+
+                <label class="label form__label">Дата записи:</label>
+                <input id="appointmentDate" class="form__text" type="date" required><br />
+
+                <label class="label form__label">Статус:</label>
+                <select id="status" class="form__text" required>
+                    <option value="">Выберите вариант</option>
+                    <option value="Запланировано">Запланировано</option>
+                    <option value="Сделано">Сделано</option>
+                    <option value="Отменено">Отменено</option>
+                </select><br />
+
+                <label class="label form__label">Цена:</label>
+                <input id="servicePrice" class="form__text" type="text" maxlength="10" required><br />
+
+                <button id="form_button" class="btn confrim__btn">Создать</button>
+            </form>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        // мин.дата сегодня
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('appointmentDate').setAttribute('min', today);
+
+        // заполнение формы данными из таблицы для редактирования
+        function fillEditForm(row) {
+            var cells = row.cells;
+            var appointmentId = cells[0].innerText.trim();
+            var client = cells[1].innerText.trim();
+            var master = cells[2].innerText.trim();
+            var service = cells[3].innerText.trim();
+            var partsDate = cells[4].innerText.split(".");
+            var appointmentDate = `${partsDate[2]}-${partsDate[1]}-${partsDate[0]}`;
+            var status = cells[5].innerText.trim();
+            var servicePrice = cells[6].innerText.trim();
+
+            document.getElementById("appointmentId").value = appointmentId;
+            document.getElementById("client").value = client;
+            document.getElementById("master").value = master;
+            document.getElementById("service").value = service;
+            document.getElementById("appointmentDate").value = appointmentDate;
+            document.getElementById("status").value = status;
+            document.getElementById("servicePrice").value = servicePrice;
+
+            document.getElementById("form_title").innerText = "Редактирование записи";
+            document.getElementById("form_button").innerText = "Обновить";
+        }
+
+        // обработчик
+        document.addEventListener('DOMContentLoaded', () => {
+            const tableBody = document.querySelector('#table_main tbody');
+            tableBody.addEventListener('click', handleClickInTable);
+
+            document.getElementById('main_form').addEventListener('submit', submitForm);
+        });
+
+        // обработка нажатий на кнопки в таблице
+        function handleClickInTable(event) {
+            const target = event.target.closest('button');
+
+            if (!target) return;
+
+            if (target.textContent === 'Редактировать') {
+                editRow(target);
+            } else if (target.textContent === 'Удалить') {
+                deleteRow(target);
+            }
+        }
+        function editRow(button) {
+            const row = button.closest('tr');
+            fillEditForm(row);
+        }
+        function deleteRow(button) {
+            const row = button.closest('tr');
+            row.remove();
+            document.getElementById('main_form').reset();
+            document.getElementById("form_title").innerText = "Создание записи";
+            document.getElementById("form_button").innerText = "Создать";
+            numInForm();
+        }
+
+
+        // сохранение/добавление данных из формы в таблицу
+        function submitForm(event) {
+            event.preventDefault();
+
+            // редактирование существующей строки в таблице
+            if (document.getElementById('form_button').innerText == "Обновить") {
+                const form = event.target;
+                const appointmentId = parseInt(form.appointmentId.value);
+                const client = form.client.value;
+                const master = form.master.value;
+                const service = form.service.value;
+                const appointmentDate = form.appointmentDate.value;
+                const status = form.status.value;
+                const servicePrice = form.servicePrice.value;
+
+                // найдем строку, которую редактируем
+                const rows = document.querySelectorAll('#table_main tbody tr');
+                let foundRow;
+                rows.forEach(row => {
+                    const cell = row.querySelector('td:nth-child(1)');
+                    if (parseInt(cell.innerText) === appointmentId) {
+                        foundRow = row;
+                    }
+                });
+
+                if (foundRow) {
+                    // Обновляем значения в таблице
+                    foundRow.querySelectorAll('td')[1].innerText = client;
+                    foundRow.querySelectorAll('td')[2].innerText = master;
+                    foundRow.querySelectorAll('td')[3].innerText = service;
+                    var partsDate = appointmentDate.split("-");
+                    foundRow.querySelectorAll('td')[4].innerText = (`${partsDate[2]}-${partsDate[1]}-${partsDate[0]}`).replace(/-/g, ".");
+                    foundRow.querySelectorAll('td')[5].innerText = status;
+                    foundRow.querySelectorAll('td')[6].innerText = servicePrice;
+                }
+                document.getElementById('main_form').reset();
+                numInForm();
+                document.getElementById("form_title").innerText = "Создание записи";
+                document.getElementById("form_button").innerText = "Создать";
+            } else { // добавление новой строки в таблицу
+                event.preventDefault();
+
+                // получаем данные из формы
+                const appointmentId = document.getElementById('appointmentId').value;
+                const client = document.getElementById('client').value;
+                const master = document.getElementById('master').value;
+                const service = document.getElementById('service').value;
+                var partsDate = document.getElementById('appointmentDate').value.split("-");
+                const appointmentDate = (`${partsDate[2]}-${partsDate[1]}-${partsDate[0]}`).replace(/-/g, ".");
+                const status = document.getElementById('status').value;
+                const servicePrice = document.getElementById('servicePrice').value;
+
+                // создаем новую строку в таблице
+                const tableBody = document.getElementById('table_main').getElementsByTagName('tbody')[0];
+                const newRow = tableBody.insertRow(-1);
+
+                // добавляем ячейки с данными
+                const newCell0 = newRow.insertCell(0);
+                newCell0.textContent = appointmentId;
+                const newCell1 = newRow.insertCell(1);
+                newCell1.textContent = client;
+                const newCell2 = newRow.insertCell(2);
+                newCell2.textContent = master;
+                const newCell3 = newRow.insertCell(3);
+                newCell3.textContent = service;
+                const newCell4 = newRow.insertCell(4);
+                newCell4.textContent = appointmentDate;
+                const newCell5 = newRow.insertCell(5);
+                newCell5.textContent = status;
+                const newCell6 = newRow.insertCell(6);
+                newCell6.textContent = servicePrice;
+                const newCellActions = newRow.insertCell(7);
+
+                // Создаем кнопки для действий
+                const editButton = document.createElement('button');
+                editButton.textContent = 'Редактировать';
+                editButton.className = 'btn edit__btn'
+                const deleteButton = document.createElement('button');
+                deleteButton.textContent = 'Удалить';
+                deleteButton.className = 'btn delete__btn';
+                const space = document.createElement('span');
+                space.textContent = ' ';
+
+                // Добавляем кнопки в последнюю ячейку
+                newCellActions.appendChild(editButton);
+                newCellActions.appendChild(space);
+                newCellActions.appendChild(deleteButton);
+
+                document.getElementById('main_form').reset();
+                numInForm();
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+        // подстановка ((последнего id в таблице) + 1) в форму для создания
+        window.onload = numInForm();
+        function numInForm() {
+            if (isTableEmpty("table_main")) {
+                document.getElementById("appointmentId").value = 1;
+                return;
+            }
+
+            var table = document.getElementById("table_main");
+            var rows = table.rows;
+            var lastRow = rows[rows.length - 1];
+
+            var lastIdCell = lastRow.cells[0];
+            var lastId = parseInt(lastIdCell.innerText.trim());
+
+            var nextId = lastId + 1;
+
+
+            document.getElementById("appointmentId").value = nextId;
+        };
+
+
+        // функция для проверки, пуста ли таблица
+        function isTableEmpty(tableId) {
+            const table = document.getElementById(tableId);
+            const tbody = table.querySelector('tbody');
+
+            return !tbody || tbody.rows.length === 0;
+        }
+    </script>
+
+</html>

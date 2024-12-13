@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(320deg, #c7d5df, #868f96, #474c50);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    width: 100%;
+    /*position: fixed;*/
+    left: 0;
+    top: 0;
+    right: 0;
+    background-color: aliceblue;
+    padding: 20px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 40px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+nav a {
+    font-size: 20px;
+    margin: 5px;
+    /*padding: 8px;*/
+    color: #111;
+    font-weight: 500;
+    border-bottom: solid transparent 3px;
+    transition: .3s ease;
+}
+
+nav a:hover {
+    border-bottom: solid #0050d5 3px;
+    color: #0050d5;
+}
+
+.button {
+    display: block;
+    padding: 10px 30px;
+    background-color: #868f96;
+    color: #fff;
+    border-radius: 10px;
+    transition: .3s ease;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/*#check {
+    display: none;
+}
+
+#check:checked ~ nav{
+    left: 0;
+    opacity: 1;
+}
+
+@media (max-width:931px){
+    header {
+        padding: 4%;
+        transition: .3s ease;
+    }
+    nav a{
+        margin: 10px;
+        transition: .3s ease;
+    }
+}
+
+label{
+    font-size: 35px;
+    cursor: pointer;
+    color: #111;
+    display: none;
+}
+
+@media(max-width:849px){
+    header nav{
+        position: absolute;
+        left: -100%;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        transition: .3s ease;
+        opacity: 0;
+    }
+
+    header nav a{
+        display: block;
+        text-align: center;
+        padding: 10px;
+        box-shadow: 0 0 10px #0050d5;
+        border-radius: 10px;
+        margin-top: 30px;
+        font-size: 22px;
+    }
+
+    label {
+        display: block;
+    }
+}*/
+
+.button:hover {
+    transform: scale(1.1);
+}
+
+
+
+@media(max-width:1600px){
+    .container {
+        display: block;
+    }
+    .table__contaier {
+        margin: 20px;  
+    }
+}
+@media(min-width:1600px){
+    .container {
+        display: flex;
+    }
+    .table__contaier {
+        margin-left: 20px;
+    }
+}
+
+.container {
+    border-radius: 15px 0;
+    margin: 10px;
+    padding: 10px;
+    /*background: linear-gradient(186deg, #868f96, #596161);*/
+    letter-spacing: 1px;
+    /*display: flex;*/
+}
+
+.table__contaier {
+    width: 60%;
+    /*margin-left: 20px;*/
+}
+
+.table__index {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    background-color: #fff;
+    box-shadow: 10px 10px 15px rgba(46, 2, 2, 0.5);
+    border-radius: 10px;
+}
+
+.table__index thead tr {
+    background-color: #868f96;
+    color: white;
+    text-align: left;
+}
+
+.table__index tbody tr {
+    border-bottom: 2px solid #596161;
+}
+
+.table__index th, .table__index td {
+    padding: 6px 8px;
+}
+
+.table__index tbody tr:nth-last-of-type(even){
+    background-color: #e3e3e3;
+}
+
+.table__index tbody tr:last-of-type{
+    border-bottom: 2px solid #596161;
+}
+
+.btn {
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+    padding: 8px 6px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+.delete__btn {
+    background-color: #f44336;
+    opacity: 0.9;
+}
+
+.edit__btn {
+    background-color: #4caf50;
+    margin-right: 10px;
+    opacity: 0.9;
+}
+
+.edit__btn:hover, .delete__btn:hover {
+    opacity: 1;
+}
+
+
+
+
+
+.edit__form {
+    margin: 0 auto;
+    display: block;
+    background: linear-gradient(100deg, #868f96, #404447);
+    width: 15cm;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.edit__form h2 {
+    text-align: center;
+}
+
+.form__label {
+    width: 140px;
+    display: inline-block;
+    margin: 0.2cm;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.form__text {
+    padding: 4px;
+    margin: 5px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid #f9f9f9;
+    width: 7cm;
+}
+.edit__form textarea {
+    width: 300px;
+    height: 150px;
+    resize: none;
+}
+
+.confrim__btn {
+    background-color: #111;
+    opacity: 0.9;
+    width: 25%;
+    margin: 0 auto;
+    display: block;
+}
+.confrim__btn:hover {
+    opacity: 1;
+}
+
+.title {
+    background-color: aliceblue;
+    text-align: center;
+}
+
+.title h1 {
+    font-size: 30px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отчёты</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="logo">Barbershop</h1>
+        <nav>
+            <a href="clients.html">Клиенты</a>
+            <a href="service.html">Услуги</a>
+            <a href="masters.html">Мастера</a>
+            <a href="priceList.html">Прайс-лист</a>
+            <a href="reports.html">Отчёты</a>
+        </nav>
+        <a href="index.html" class="button">Посещения</a>
+    </header>
+    <div class="title">
+        <h1>Отчёты</h1>
+    </div>
+
+    <div class="container">
+
+        <div class="edit__form">
+            <h2 id="form_title">Создание отчёта</h2>
+            <form id="main_form_reports">
+                <label class="label form__label">Выберите отчёт:</label>
+                <select id="reportId" class="form__text" required>
+                    <option value="">Выберите вариант</option>
+                    <option value="1">Популярные услуги</option>
+                    <option value="2">Рейтинг мастеров</option>
+                    <option value="3">Активность клиентов</option>
+                    <option value="4">Статистика по статусам посещений</option>
+                </select><br />
+
+
+                <button id="form_button" class="btn confrim__btn">Создать</button>
+            </form>
+        </div>
+    </div>
+    <div class="contanier">
+        <div id="table_container" class="table__contaier" style="margin: 0 auto;
+                                        display: none;">
+            <table id="table_report" class="table__index">
+                <thead>
+                    <tr>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>3</th>
+                        <th>4</th>
+                        <th>5</th>
+                        <th>6</th>
+                        <th>7</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1/1</td>
+                        <td>2/1</td>
+                        <td>3/1</td>
+                        <td>4/1</td>
+                        <td>5/1</td>
+                        <td>6/1</td>
+                        <td>7/1</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script>
+        const report1 = [
+            ["Номер услуги", "Услуга", "Количество посещений", "Общая сумма выручки"],
+            ["6", "Мытьё головы", "2", "1000"],
+            ["5", "Окрашивание", "1", "3000"],
+            ["1", "Стрижка", "1", "1000"],
+            ["4", "Детская стрижка", "1", "700"],
+            ["2", "Бритье", "0", "0"],
+            ["3", "Моделирование бороды", "0", "0"],
+            ["7", "Массаж головы", "0", "0"]
+        ]
+        const report2 = [
+            ["Номер мастера", "Имя", "Количество оказанных услуг", "Общая сумма выручки"],
+            ["4", "Николай", "2", "3700"],
+            ["1", "Андрей", "1", "1000"],
+            ["5", "Игорь", "1", "600"],
+            ["3", "Егор", "1", "500"],
+            ["6", "Артем", "1", "500"],
+            ["2", "Дмитрий", "0", "0"]
+        ]
+        const report3 = [
+            ["Номер клиента", "Имя", "Количество посещений", "Общая сумма выручки"],
+            ["2", "Петр", "1", "3000"],
+            ["1", "Иван", "2", "1500"],
+            ["4", "Алексей", "2", "1300"],
+            ["6", "Михаил", "1", "500"],
+            ["3", "Сергей", "0", "0"],
+            ["5", "Дмитрий", "0", "0"],
+            ["7", "Олег", "0", "0"]
+        ]
+        const report4 = [
+            ["Статус", "Количество"],
+            ["Сделано", "6"],
+            ["Запланировано", "4"],
+            ["Отменено", "2"]
+        ]
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+
+            document.getElementById('main_form_reports').addEventListener('submit', submitForm);
+        });
+
+
+
+
+        function submitForm() {
+            event.preventDefault();
+
+            if(document.getElementById('reportId').value === '1')
+                data = report1;
+            else if(document.getElementById('reportId').value === '2')
+                data = report2;
+            else if(document.getElementById('reportId').value === '3')
+                data = report3;
+            else if(document.getElementById('reportId').value === '4')
+                data = report4;
+
+            const container = document.getElementById('table_container');
+            while (container.firstChild) {
+                container.removeChild(container.firstChild);
+            }
+
+
+            const table = document.createElement('table');
+
+            const thead = table.createTHead();
+            const headerRow = thead.insertRow();
+
+
+            for (let i = 0; i < data[0].length; i++) {
+                const columnheader = headerRow.insertCell();
+                columnheader.style = 'font-weight: bold; font-size: 22px'
+                columnheader.textContent = data[0][i];
+            }
+
+            const tbody = table.createTBody();
+
+            for (let i = 1; i < data.length; i++) {
+                const row = tbody.insertRow();
+                for (let j = 0; j < data[i].length; j++) {
+                    const cell = row.insertCell();
+                    cell.textContent = data[i][j];
+                    cell.style = 'font-size: 16px';
+                }
+            }
+
+
+            container.style.display = "block";
+
+            table.className = "table__index";
+            table.id = "table_report";
+            container.appendChild(table);
+        }
+
+    </script>
+
+</html>

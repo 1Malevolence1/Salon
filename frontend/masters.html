@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мастера</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="logo">Barbershop</h1>
+        <nav>
+            <a href="clients.html">Клиенты</a>
+            <a href="service.html">Услуги</a>
+            <a href="masters.html">Мастера</a>
+            <a href="priceList.html">Прайс-лист</a>
+            <a href="reports.html">Отчёты</a>
+        </nav>
+        <a href="index.html" class="button">Посещения</a>
+    </header>
+
+    <div class="title"><h1>Мастера</h1></div>
+    <div class="container">
+        <div class="table__contaier">
+            <table id="table_main" class="table__index">
+                <thead>
+                    <tr>
+                        <th>Номер</th>
+                        <th>Имя</th>
+                        <th>Фамилия</th>
+                        <th>Отчество</th>
+                        <th>Действие</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Андрей</td>
+                        <td>Смирнов</td>
+                        <td>Андреевич</td>
+                        <td>
+                            <button class="btn edit__btn">Редактировать</button>
+                            <button class="btn delete__btn">Удалить</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Дмитрий</td>
+                        <td>Попов</td>
+                        <td>Владимирович</td>
+                        <td>
+                            <button class="btn edit__btn">Редактировать</button>
+                            <button class="btn delete__btn">Удалить</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Егор</td>
+                        <td>Белов</td>
+                        <td>Егорович</td>
+                        <td>
+                            <button class="btn edit__btn">Редактировать</button>
+                            <button class="btn delete__btn">Удалить</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Николай</td>
+                        <td>Соколов</td>
+                        <td>Николаевич</td>
+                        <td>
+                            <button class="btn edit__btn">Редактировать</button>
+                            <button class="btn delete__btn">Удалить</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Игорь</td>
+                        <td>Лебедев</td>
+                        <td>Игоревич</td>
+                        <td>
+                            <button class="btn edit__btn">Редактировать</button>
+                            <button class="btn delete__btn">Удалить</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Артем</td>
+                        <td>Новиков</td>
+                        <td>Артемович</td>
+                        <td>
+                            <button class="btn edit__btn">Редактировать</button>
+                            <button class="btn delete__btn">Удалить</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="edit__form">
+            <h2 id="form_title">Создание записи</h2>
+            <form id="main_form_masters">
+                <label class="label form__label">Номер:</label>
+                <input id="masterId" class="form__text" type="text" maxlength="10" readonly required><br />
+
+                <label class="label form__label">Имя:</label>
+                <input id="givenName" class="form__text" type="text" maxlength="255" required><br />
+
+                <label class="label form__label">Фамилия:</label>
+                <input id="surname" class="form__text" type="text" maxlength="255" required><br />
+
+                <label class="label form__label">Отчество:</label>
+                <input id="patronymic" class="form__text" type="text" maxlength="255" required><br />
+
+                <button id="form_button" class="btn confrim__btn">Создать</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="table__contaier">
+            <table id="table_master_schedules" class="table__index">
+                <thead>
+                    <tr>
+                        <th>Номер</th>
+                        <th>Мастер</th>
+                        <th>День недели</th>
+                        <th>Начало работы</th>
+                        <th>Конец работы</th>
+                        <th>Действие</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Андрей</td>
+                        <td>Понедельник</td>
+                        <td>9:00</td>
+                        <td>18:00</td>
+                        <td>
+                            <button class="btn edit__btn">Редактировать</button>
+                            <button class="btn delete__btn">Удалить</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Егор</td>
+                        <td>Вторник</td>
+                        <td>9:30</td>
+                        <td>17:00</td>
+                        <td>
+                            <button class="btn edit__btn">Редактировать</button>
+                            <button class="btn delete__btn">Удалить</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Дмитрий</td>
+                        <td>Среда</td>
+                        <td>10:00</td>
+                        <td>19:00</td>
+                        <td>
+                            <button class="btn edit__btn">Редактировать</button>
+                            <button class="btn delete__btn">Удалить</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Николай</td>
+                        <td>Четверг</td>
+                        <td>9:30</td>
+                        <td>17:00</td>
+                        <td>
+                            <button class="btn edit__btn">Редактировать</button>
+                            <button class="btn delete__btn">Удалить</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Николай</td>
+                        <td>Пятница</td>
+                        <td>9:30</td>
+                        <td>17:00</td>
+                        <td>
+                            <button class="btn edit__btn">Редактировать</button>
+                            <button class="btn delete__btn">Удалить</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Игорь</td>
+                        <td>Субота</td>
+                        <td>9:30</td>
+                        <td>17:00</td>
+                        <td>
+                            <button class="btn edit__btn">Редактировать</button>
+                            <button class="btn delete__btn">Удалить</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Артем</td>
+                        <td>Воскресенье</td>
+                        <td>10:00</td>
+                        <td>18:00</td>
+                        <td>
+                            <button class="btn edit__btn">Редактировать</button>
+                            <button class="btn delete__btn">Удалить</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Андрей</td>
+                        <td>Воскресенье</td>
+                        <td>11:00</td>
+                        <td>18:00</td>
+                        <td>
+                            <button class="btn edit__btn">Редактировать</button>
+                            <button class="btn delete__btn">Удалить</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="edit__form">
+            <h2 id="form_title_2">Создание записи</h2>
+            <form id="main_form_schedules">
+                <label class="label form__label">Номер:</label>
+                <input id="schedulesId" class="form__text" type="text" maxlength="10" readonly required><br />
+
+                <label class="label form__label">Мастер:</label>
+                <select id="masterId2" class="form__text" required>
+                    <option value="">Выберите вариант</option>
+                    <option value="Андрей">Андрей</option>
+                    <option value="Дмитрий">Василий</option>
+                    <option value="Алексей">Алексей</option>
+                    <option value="Егор">Егор</option>
+                    <option value="Николай">Николай</option>
+                    <option value="Игорь">Игорь</option>
+                    <option value="Артем">Артем</option>
+                </select>
+
+                <label class="label form__label">День недели:</label>
+                <select id="dayOfWeek" class="form__text" required>
+                    <option value="">Выберите вариант</option>
+                    <option value="Понедельник">Понедельник</option>
+                    <option value="Вторник">Вторник</option>
+                    <option value="Среда">Среда</option>
+                    <option value="Четверг">Четверг</option>
+                    <option value="Пятница">Пятница</option>
+                    <option value="Субота">Субота</option>
+                    <option value="Воскресенье">Воскресенье</option>
+                </select>
+
+                <label class="label form__label">Начало работы:</label>
+                <input id="startTime" class="form__text" type="time" required><br />
+
+                <label class="label form__label">Конец работы:</label>
+                <input id="endTime" class="form__text" type="time" required><br />
+
+                <button id="form_button_2" class="btn confrim__btn">Создать</button>
+            </form>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        // функция для заполнения формы данными из строки таблицы                НОМЕР 1
+        function fillEditForm(row) {
+            var cells = row.cells;
+            var masterId = cells[0].innerText.trim();
+            var givenName = cells[1].innerText.trim();
+            var surname = cells[2].innerText.trim();
+            var patronymic = cells[3].innerText.trim();
+
+            document.getElementById("masterId").value = masterId;
+            document.getElementById("givenName").value = givenName;
+            document.getElementById("surname").value = surname;
+            document.getElementById("patronymic").value = patronymic;
+
+            document.getElementById("form_title").innerText = "Редактирование записи";
+            document.getElementById("form_button").innerText = "Обновить";
+        }
+
+
+
+
+
+        // обработчик
+        document.addEventListener('DOMContentLoaded', () => {
+            const tableBody = document.querySelector('#table_main tbody');
+            tableBody.addEventListener('click', handleClickInTable);
+
+            document.getElementById('main_form_masters').addEventListener('submit', submitForm);
+        });
+
+        // обработка нажатий на кнопки в таблице
+        function handleClickInTable(event) {
+            const target = event.target.closest('button');
+
+            if (!target) return;
+
+            if (target.textContent === 'Редактировать') {
+                editRow(target);
+            } else if (target.textContent === 'Удалить') {
+                deleteRow(target);
+            }
+        }
+        function editRow(button) {
+            const row = button.closest('tr');
+            fillEditForm(row);
+        }
+        function deleteRow(button) {
+            const row = button.closest('tr');
+            row.remove();
+            document.getElementById('main_form_masters').reset();
+            document.getElementById("form_title").innerText = "Создание записи";
+            document.getElementById("form_button").innerText = "Создать";
+            numInForm();
+        }
+
+        function submitForm(event) {
+            event.preventDefault();
+
+            // редактирование существующей строки в таблице
+            if (document.getElementById('form_button').innerText == "Обновить") {
+                const form = event.target;
+                const masterId = parseInt(form.masterId.value);
+                const givenName = form.givenName.value;
+                const surname = form.surname.value;
+                const patronymic = form.patronymic.value;
+
+                // найдем строку, которую редактируем
+                const rows = document.querySelectorAll('#table_main tbody tr');
+                let foundRow;
+                rows.forEach(row => {
+                    const cell = row.querySelector('td:nth-child(1)');
+                    if (parseInt(cell.innerText) === masterId) {
+                        foundRow = row;
+                    }
+                });
+
+                if (foundRow) {
+                    // Обновляем значения в таблице
+                    foundRow.querySelectorAll('td')[1].innerText = givenName;
+                    foundRow.querySelectorAll('td')[2].innerText = surname;
+                    foundRow.querySelectorAll('td')[3].innerText = patronymic;
+                }
+                document.getElementById('main_form_masters').reset();
+                numInForm();
+                document.getElementById("form_title").innerText = "Создание записи";
+                document.getElementById("form_button").innerText = "Создать";
+            } else { // добавление новой строки в таблицу
+                event.preventDefault();
+
+                // получаем данные из формы
+                const masterId = document.getElementById('masterId').value;
+                const givenName = document.getElementById('givenName').value;
+                const surname = document.getElementById('surname').value;
+                const patronymic = document.getElementById('patronymic').value;
+
+                // создаем новую строку в таблице
+                const tableBody = document.getElementById('table_main').getElementsByTagName('tbody')[0];
+                const newRow = tableBody.insertRow(-1);
+
+                // добавляем ячейки с данными
+                const newCell0 = newRow.insertCell(0);
+                newCell0.textContent = masterId;
+                const newCell1 = newRow.insertCell(1);
+                newCell1.textContent = givenName;
+                const newCell2 = newRow.insertCell(2);
+                newCell2.textContent = surname;
+                const newCell3 = newRow.insertCell(3);
+                newCell3.textContent = patronymic;
+                const newCellActions = newRow.insertCell(4);
+
+                // Создаем кнопки для действий
+                const editButton = document.createElement('button');
+                editButton.textContent = 'Редактировать';
+                editButton.className = 'btn edit__btn'
+                const deleteButton = document.createElement('button');
+                deleteButton.textContent = 'Удалить';
+                deleteButton.className = 'btn delete__btn';
+                const space = document.createElement('span');
+                space.textContent = ' ';
+
+                // Добавляем кнопки в последнюю ячейку
+                newCellActions.appendChild(editButton);
+                newCellActions.appendChild(space);
+                newCellActions.appendChild(deleteButton);
+
+                document.getElementById('main_form_masters').reset();
+                numInForm();
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+        // подстановка ((последнего id в таблице) + 1) в форму для создания
+        window.onload = numInForm();
+        function numInForm() {
+            if (isTableEmpty("table_main")) {
+                document.getElementById("masterId").value = 1;
+                return;
+            }
+
+            var table = document.getElementById("table_main");
+            var rows = table.rows;
+            var lastRow = rows[rows.length - 1];
+
+            var lastIdCell = lastRow.cells[0];
+            var lastId = parseInt(lastIdCell.innerText.trim());
+
+            var nextId = lastId + 1;
+
+
+            document.getElementById("masterId").value = nextId;
+        };
+        // функция для проверки, пуста ли таблица
+        function isTableEmpty(tableId) {
+            const table = document.getElementById(tableId);
+            const tbody = table.querySelector('tbody');
+
+            return !tbody || tbody.rows.length === 0;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // функция для заполнения формы данными из строки таблицы                НОМЕР 2
+        function fillEditForm2(row) {
+            var cells = row.cells;
+            var schedulesId = cells[0].innerText.trim();
+            var masterId = cells[1].innerText.trim();
+            var dayOfWeek = cells[2].innerText.trim();
+            var startTime = cells[3].innerText.trim();
+            var endTime = cells[4].innerText.trim();
+
+            document.getElementById("schedulesId").value = schedulesId;
+            document.getElementById("masterId2").value = masterId;
+            document.getElementById("dayOfWeek").value = dayOfWeek;
+
+            if (startTime.length == 4)
+                startTime = '0' + startTime;
+            if (endTime.length == 4)
+                endTime = '0' + endTime;
+            document.getElementById("startTime").value = startTime;
+            document.getElementById("endTime").value = endTime;
+
+
+            document.getElementById("form_title_2").innerText = "Редактирование записи";
+            document.getElementById("form_button_2").innerText = "Обновить";
+        }
+
+        // обработчик
+        document.addEventListener('DOMContentLoaded', () => {
+            const tableBody = document.querySelector('#table_master_schedules tbody');
+            tableBody.addEventListener('click', handleClickInTable2);
+
+            document.getElementById('main_form_schedules').addEventListener('submit', submitForm2);
+        });
+
+        // обработка нажатий на кнопки в таблице
+        function handleClickInTable2(event) {
+            const target = event.target.closest('button');
+
+            if (!target) return;
+
+            if (target.textContent === 'Редактировать') {
+                editRow2(target);
+            } else if (target.textContent === 'Удалить') {
+                deleteRow2(target);
+            }
+        }
+        function editRow2(button) {
+            const row = button.closest('tr');
+            fillEditForm2(row);
+        }
+        function deleteRow2(button) {
+            const row = button.closest('tr');
+            row.remove();
+            document.getElementById('main_form_schedules').reset();
+            document.getElementById("form_title_2").innerText = "Создание записи";
+            document.getElementById("form_button_2").innerText = "Создать";
+            numInForm2();
+        }
+
+
+        // сохранение/добавление данных из формы в таблицу
+        function submitForm2(event) {
+            event.preventDefault();
+
+            // редактирование существующей строки в таблице
+            if (document.getElementById('form_button_2').innerText == "Обновить") {
+                const form = event.target;
+                const schedulesId = parseInt(form.schedulesId.value);
+                const masterId2 = form.masterId2.value;
+                const dayOfWeek = form.dayOfWeek.value;
+                const startTime = form.startTime.value;
+                const endTime = form.endTime.value;
+
+                // найдем строку, которую редактируем
+                const rows = document.querySelectorAll('#table_master_schedules tbody tr');
+                let foundRow;
+                rows.forEach(row => {
+                    const cell = row.querySelector('td:nth-child(1)');
+                    if (parseInt(cell.innerText) === schedulesId) {
+                        foundRow = row;
+                    }
+                });
+
+                if (foundRow) {
+                    // Обновляем значения в таблице
+                    foundRow.querySelectorAll('td')[1].innerText = masterId2;
+                    foundRow.querySelectorAll('td')[2].innerText = dayOfWeek;
+                    foundRow.querySelectorAll('td')[3].innerText = startTime;
+                    foundRow.querySelectorAll('td')[4].innerText = endTime;
+                }
+                document.getElementById('main_form_schedules').reset();
+                numInForm2();
+                document.getElementById("form_title_2").innerText = "Создание записи";
+                document.getElementById("form_button_2").innerText = "Создать";
+            } else { // добавление новой строки в таблицу
+
+                // получаем данные из формы
+                const schedulesId = document.getElementById('schedulesId').value;
+                const masterId2 = document.getElementById('masterId2').value;
+                const dayOfWeek = document.getElementById('dayOfWeek').value;
+                const startTime = document.getElementById('startTime').value;
+                const endTime = document.getElementById('endTime').value;
+
+                // создаем новую строку в таблице
+                const tableBody = document.getElementById('table_master_schedules').getElementsByTagName('tbody')[0];
+                const newRow = tableBody.insertRow(-1);
+
+                // добавляем ячейки с данными
+                const newCell0 = newRow.insertCell(0);
+                newCell0.textContent = schedulesId;
+                const newCell1 = newRow.insertCell(1);
+                newCell1.textContent = masterId2;
+                const newCell2 = newRow.insertCell(2);
+                newCell2.textContent = dayOfWeek;
+                const newCell3 = newRow.insertCell(3);
+                newCell3.textContent = startTime;
+                const newCell4 = newRow.insertCell(4);
+                newCell4.textContent = endTime;
+                const newCellActions = newRow.insertCell(5);
+
+                // Создаем кнопки для действий
+                const editButton = document.createElement('button');
+                editButton.textContent = 'Редактировать';
+                editButton.className = 'btn edit__btn'
+                const deleteButton = document.createElement('button');
+                deleteButton.textContent = 'Удалить';
+                deleteButton.className = 'btn delete__btn';
+                const space = document.createElement('span');
+                space.textContent = ' ';
+
+                // Добавляем кнопки в последнюю ячейку
+                newCellActions.appendChild(editButton);
+                newCellActions.appendChild(space);
+                newCellActions.appendChild(deleteButton);
+
+                numInForm2;
+                document.getElementById('main_form_schedules').reset();
+            }
+        }
+
+
+
+
+
+
+        // подстановка ((последнего id в таблице) + 1) в форму для создания
+        window.onload = numInForm2();
+        function numInForm2() {
+            if (isTableEmpty("table_master_schedules")) {
+                document.getElementById("schedulesId").value = 1;
+                return;
+            }
+
+            var table = document.getElementById("table_master_schedules");
+            var rows = table.rows;
+            var lastRow = rows[rows.length - 1];
+
+            var lastIdCell = lastRow.cells[0];
+            var lastId = parseInt(lastIdCell.innerText.trim());
+
+            var nextId = lastId + 1;
+
+
+            document.getElementById("schedulesId").value = nextId;
+        };
+    </script>
+
+</html>
